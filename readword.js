@@ -106,6 +106,8 @@ describe('class Mime', function() {
         assert.equal(mime.getType('c:\\path\\to\\page.html'), 'text/html');
         assert.equal(mime.getType('page.html'), 'text/html');
         assert.equal(mime.getType('path/to/page.html'), 'text/html');
+
+
         assert.equal(mime.getType('path\\to\\page.html'), 'text/html');
         assert.strictEqual(mime.getType('/txt'), null);
         assert.strictEqual(mime.getType('\\txt'), null);
@@ -134,6 +136,11 @@ describe('class Mime', function() {
 
 describe('DB', function() {
     var diffs = [];
+    //after:测试用例的钩子，
+    //before：在本测试套件的所有测试用例之前执行
+    //after：在本测试套件的所有测试用例之后执行
+    //beforeEach：在本测试套件的每个测试用例之前执行
+    //afterEach：在本测试套件的每个测试用例之后执行
     after(function() {
         if (diffs.length) {
             //有不一致

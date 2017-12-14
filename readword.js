@@ -108,6 +108,7 @@ describe('class Mime', function() {
         assert.equal(mime.getType('path/to/page.html'), 'text/html');
 
 
+
         assert.equal(mime.getType('path\\to\\page.html'), 'text/html');
         assert.strictEqual(mime.getType('/txt'), null);
         assert.strictEqual(mime.getType('\\txt'), null);
@@ -144,6 +145,7 @@ describe('DB', function() {
     after(function() {
         if (diffs.length) {
             //有不一致
+            //MDN与MIME类型有以下矛盾的预计 
             console.log('\n[INFO] The following inconsistencies with MDN (https://goo.gl/lHrFU6) and/or mime-types (https://github.com/jshttp/mime-types) are expected:');
             //forEach()调用数组中的每个元素,chalk:改变颜色
             diffs.forEach(function(d) { 

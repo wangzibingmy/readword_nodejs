@@ -14,4 +14,5 @@
 >- 测试在https://goo.gl/lHrFU6 列出的MDN类型，如果有不同，执行after里面的内容 
 - 测试结果：  
 ![image](img/t1.jpg)  
-![image](img/t2.jpg)  
+![image](img/t2.jpg)   
+- 经过这次研读代码的经历，学习到关于MIME的许多知识，锻炼了自身读代码的能力，扩展了视野。更懂得了只要认真对待就有成果的道理。
